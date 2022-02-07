@@ -110,16 +110,18 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(2.5rem + 1.5vw);
+  margin-bottom: 2rem;
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
   }
 }
 
 h2, .h2 {
   font-size: calc(1.325rem + 0.9vw);
+  padding-bottom: 1rem;
 }
 @media (min-width: 1200px) {
   h2, .h2 {
@@ -11307,10 +11309,16 @@ p {
 .page-section {
   padding: 6rem 0;
 }
+
+.page-section h1.section-heading{
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
 .page-section h2.section-heading, .page-section .section-heading.h2 {
   font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   font-size: 1rem;
@@ -11426,7 +11434,7 @@ header.masthead {
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
   font-style: italic;
-  line-height: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 25px;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
@@ -11434,7 +11442,7 @@ header.masthead .masthead-heading {
   font-size: 3.25rem;
   font-weight: 700;
   line-height: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
