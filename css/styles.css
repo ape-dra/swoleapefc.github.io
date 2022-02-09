@@ -40,7 +40,7 @@
   --bs-warning: #ffc800;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
-  --bs-dark: #212529;
+  --bs-dark: #050802;
   --bs-primary-rgb: 255, 200, 0;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
@@ -61,7 +61,7 @@
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
   --bs-body-color: #fff;
-  --bs-body-bg: #222;
+  --bs-body-bg: #050802;
 }
 
 *,
@@ -132,6 +132,7 @@ h2, .h2 {
 
 h3, .h3 {
   font-size: calc(1.3rem + 0.6vw);
+
 }
 @media (min-width: 1200px) {
   h3, .h3 {
@@ -141,6 +142,7 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: calc(1.275rem + 0.3vw);
+  font-weight: 400;
 }
 @media (min-width: 1200px) {
   h4, .h4 {
@@ -3246,7 +3248,7 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #212529;
   border-color: #212529;
-}
+}$
 .btn-dark:hover {
   color: #fff;
   background-color: #1c1f23;
@@ -3427,7 +3429,7 @@ textarea.form-control-lg {
   border-color: #f8f9fa;
 }
 .btn-outline-light:hover {
-  color: #000;
+  color: ##050802;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -7777,7 +7779,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #6c757d !important;
+  color: #ddd !important;
 }
 
 .text-black-50 {
@@ -11303,9 +11305,8 @@ body {
 
 p {
   line-height: 1.75;
+  font-weight: 300;
 }
-
-
 
 .page-section {
   padding: 6rem 0;
@@ -11331,6 +11332,10 @@ p {
 
 #mission-icons{
   margin: 1.5rem 0;
+}
+
+#roadmap{
+background-color: #162408;
 }
 
 @media (min-width: 768px) {
@@ -11430,6 +11435,8 @@ p {
   }
 }
 header.masthead {
+max-width: 100%;
+overflow:auto;
   line-height: 1rem;
   padding-top: 10.5rem;
   padding-bottom: 2rem;
@@ -11437,8 +11444,6 @@ header.masthead {
   color: #fff;
   background-color: #330066;
   top: 400px;
- 
-
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
@@ -11456,15 +11461,15 @@ header.masthead .masthead-heading {
 }
 
 #header-img img{
- width:100vw;
+ width:90vw;
 }
 
 
 @media (min-width: 480px) {
   header.masthead {
     padding-top: 17rem;
-    padding-bottom: 12.5rem;
-    height: 100vh;
+    overflow:auto;
+    max-width:100%;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -11482,8 +11487,7 @@ header.masthead .masthead-heading {
 
 @media(max-width: 480px){
   header.masthead{
-background-size: 25rem;
-height: 100vh;
+    background-size: 25rem;
   }
 }
 
@@ -11757,7 +11761,7 @@ height: 100vh;
 }
 
 section#contact {
-  background-color: #212529;
+  background-color: transparent;
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -11808,6 +11812,17 @@ section#contact form#contactForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
+}
+
+#footer-logo img{
+  vertical-align: center;
+width: 15vw;
+}
+
+@media (max-width:480px) {
+#footer-logo img{
+  width: 50vw;
+}
 }
 
 .footer {
