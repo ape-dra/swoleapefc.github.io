@@ -605,6 +605,7 @@ progress {
 }
 @media (min-width: 350px){
   .img-fluid {
+  padding-top: 0rem;
   max-width: 80vw;
   height: auto;
   display: block;
@@ -623,6 +624,7 @@ progress {
 }
 @media (min-width: 992){
   .img-fluid {
+  padding-top: 0rem;
   max-width: 20vw;
   height: auto;
   display: block;
