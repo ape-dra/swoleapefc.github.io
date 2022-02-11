@@ -603,19 +603,46 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-
-.img-fluid {
-  max-width: 100%;
+@media (min-width: 350px){
+  .img-fluid {
+  max-width: 80vw;
   height: auto;
+  display: block;
+  margin: auto;
+}
 }
 
-.img-thumbnail {
-  padding: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  border-radius: 0.25rem;
-  max-width: 100%;
+@media (min-width: 768px){
+  .img-fluid {
+  padding-top: 5rem;
+  max-width: 75vw;
   height: auto;
+  display: block;
+  margin: auto;
+}
+}
+@media (min-width: 992){
+  .img-fluid {
+  max-width: 20vw;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+}
+
+
+
+
+
+
+.img-thumbnail {
+  display: inline-block;
+  padding: 0.25rem;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  height: 1.5em;
+  width: auto;
 }
 
 .figure {
@@ -11443,7 +11470,6 @@ max-width: 320px;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11475,14 +11501,25 @@ max-width: 320px;
   }
 }
 header.masthead {
-max-width: 100%;
-overflow:auto;
+  max-width: 100%;
+  overflow:auto;
   line-height: 1rem;
   padding-top: 10.5rem;
   padding-bottom: 2rem;
   color: #fff;
   background-color: #330066;
   top: 400px;
+}
+header.error-masthead{
+  background-color: #fff;
+  max-width: 100%;
+  overflow:auto;
+  line-height: 1rem;
+  padding-top: 10.5rem;
+  padding-bottom: 2rem;
+  color: #050802;
+  top: 400px;
+  height: 90vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;
