@@ -180,7 +180,7 @@ address {
 
 ol,
 ul {
-  padding-left: 2rem;
+  padding-left: 0rem;
 }
 
 ol,
@@ -11428,6 +11428,13 @@ max-width: 320px;
 @media (min-width: 360px) {
   #mainNav{
     padding: 0;
+  }
+}
+
+@media (max-width: 768px){
+  #mainNav .navbar-brand img{
+    display: flex;
+    height: 1.5rem;
   }
 }
 

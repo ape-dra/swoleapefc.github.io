@@ -5,13 +5,13 @@
 /* GLOBAL STYLES */
 
 :root {
-  --font-primary: 'Montserrat', sans-serif;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-secondary: 'Arvo', serif;
   --font-code: 'Roboto', monospace;
   --bg-color: #00163f;
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
-  --accent-color: #be7efe;
+  --accent-color: #330066;
   --header-shadow: #000 0px 0px 5px;
 }
 
@@ -33,8 +33,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  max-width: 960px;
-  margin: 0 auto;
+  margin: 1rem;
   padding: 1rem 2rem;
 }
 
@@ -90,8 +89,9 @@ section {
 
 .countdown ul {
   display: flex;
-  gap: 2rem
+  gap: 1rem
 }
+
 .countdown .clock-item {
   list-style: none;
   width: 70px;
@@ -138,6 +138,8 @@ section {
   text-align: center;
 }
 
+
+
 /* OWNER STYLES */
 
 .owner-status {
@@ -164,3 +166,12 @@ section {
   }
 }
  
+/* Media Styles */
+
+@media (min-width: 350px){
+  #mainNav .navbar-brand img{
+    display: flex;
+    height: 1rem;
+    width: auto;
+  }
+}
