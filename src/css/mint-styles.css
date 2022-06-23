@@ -12,6 +12,7 @@
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
   --accent-color: #330066;
+  --header-shadow: #000 0px 0px 5px;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
   background-color: var(--bg-color);
   display: flex;
   flex-flow: column;
-  max-width: 100vw;
+  height: 100vh;
   color: var(--font-color);
   font-family: var(--font-primary);
 }
@@ -32,6 +33,8 @@ body {
 .container {
   display: flex;
   flex-direction: column;
+  margin: 1rem;
+  padding: 1rem 2rem;
 }
 
 /* HEADER */
@@ -41,7 +44,7 @@ header {
 }
 
 header .container {
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
@@ -50,29 +53,6 @@ header .container {
   display: flex;
   gap: 2rem;
   align-items: center;
-}
-
-#mintNav{
-  height: 72px;
-}
-
-#navLogo{
-  padding: 0 16px;
-  max-width: 150px;
-}
-
-#connectButton{
-  font-weight: 700;
-  margin: 0 16px;
-}
-
-#mint-card{
-  z-index: 1;
-}
-
-#mint-header-img img{
-  width: 80vw;
-  padding-top: -300px;
 }
 
 /* BUTTONS */
@@ -91,13 +71,6 @@ header .container {
   border-radius: 4px;
   font-size: 1.2rem;
   padding: 1.5rem 3rem;
-}
-
-/* Phrase Styles */
-
-#status {
-  font-size: 1.2rem;
-  white-space: pre-line;
 }
 
 /* COUNTDOWN SECTION */
@@ -198,45 +171,7 @@ section {
 @media (min-width: 350px){
   #mainNav .navbar-brand img{
     display: flex;
+    height: 1rem;
+    width: auto;
   }
 }
-
-
-@media(max-width: 480px){
-  header.masthead{
-    background-size: 25rem;
-    background: linear-gradient(#330066, #00163f);
-    padding-top: 7rem;
-  }
-  #mint-header-img{
-    margin-top: -35%;
-  }
-  #mint-header-img img{
-    width: 350vw;
-  }
-}
-
-
-@media( min-width: 768px){
-    header.masthead{
-      background-size: 25rem;
-    }
-    #mint-header-img{
-      margin-top: -3em;
-    }
-    #mint-header-img img{
-      width: 175vw;
-    }
-  }
-
-@media( min-width: 992px){
-    header.masthead{
-      background-size: 25rem;
-    }
-    #mint-header-img{
-      margin-top: -3em;
-    }
-    #mint-header-img img{
-      width: 125vw;
-    }
-  }

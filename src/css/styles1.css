@@ -180,7 +180,7 @@ address {
 
 ol,
 ul {
-  padding-left: 0rem;
+  padding-left: 2rem;
 }
 
 ol,
@@ -603,48 +603,19 @@ progress {
 .blockquote-footer::before {
   content: "— ";
 }
-@media (min-width: 350px){
-  .img-fluid {
-  padding-top: 0rem;
-  max-width: 80vw;
+
+.img-fluid {
+  max-width: 100%;
   height: auto;
-  display: block;
-  margin: auto;
 }
-}
-
-@media (min-width: 768px){
-  .img-fluid {
-  padding-top: 5rem;
-  max-width: 75vw;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-}
-@media (min-width: 992){
-  .img-fluid {
-  padding-top: 0rem;
-  max-width: 20vw;
-  height: auto;
-  display: block;
-  margin: auto;
-}
-}
-
-
-
-
-
 
 .img-thumbnail {
-  display: inline-block;
   padding: 0.25rem;
-  background-color: transparent;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
   border-radius: 0.25rem;
-  display: inline-block;
-  height: 1.5em;
-  width: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .figure {
@@ -3074,7 +3045,7 @@ textarea.form-control-lg {
   border-color: #ffc800;
 }
 .btn-primary:hover {
-  color: #eee;
+  color: #fff;
   background-color: #d9aa00;
   border-color: #cca000;
 }
@@ -11460,18 +11431,12 @@ max-width: 320px;
   }
 }
 
-@media (max-width: 768px){
-  #mainNav .navbar-brand img{
-    display: flex;
-    height: 40px;
-  }
-}
-
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
+    background-color: transparent;
     transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
@@ -11503,25 +11468,14 @@ max-width: 320px;
   }
 }
 header.masthead {
-  max-width: 100%;
-  overflow:auto;
+max-width: 100%;
+overflow:auto;
   line-height: 1rem;
   padding-top: 10.5rem;
   padding-bottom: 2rem;
   color: #fff;
   background-color: #330066;
   top: 400px;
-}
-header.error-masthead{
-  background-color: #fff;
-  max-width: 100%;
-  overflow:auto;
-  line-height: 1rem;
-  padding-top: 10.5rem;
-  padding-bottom: 2rem;
-  color: #050802;
-  top: 400px;
-  height: 90vh;
 }
 header.masthead .masthead-subheading {
   font-size: 1.5rem;

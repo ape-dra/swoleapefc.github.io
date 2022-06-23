@@ -11463,7 +11463,7 @@ max-width: 320px;
 @media (max-width: 768px){
   #mainNav .navbar-brand img{
     display: flex;
-    height: 40px;
+    height: 1.5rem;
   }
 }
 
