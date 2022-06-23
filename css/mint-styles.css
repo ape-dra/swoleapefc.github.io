@@ -12,12 +12,14 @@
   --font-color: #ffffff;
   --btn-bg-color: #ffffff;
   --accent-color: #330066;
+  
 }
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -56,7 +58,13 @@ header .container {
   height: 72px;
 }
 
-#navLogo{
+#navLogoDesktop{
+  padding: 16px;
+  display: block;
+}
+
+#navLogoMobile{
+  display: none;
   padding: 0 16px;
   max-width: 150px;
 }
@@ -96,7 +104,7 @@ header .container {
 /* Phrase Styles */
 
 #status {
-  font-size: 1.2rem;
+  font-size: 1 rem;
   white-space: pre-line;
 }
 
@@ -106,64 +114,7 @@ section {
   flex: 1 1 auto;
 }
 
-.countdown {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
 
-.countdown ul {
-  display: flex;
-  gap: 1rem
-}
-
-.countdown .clock-item {
-  list-style: none;
-  width: 70px;
-  height: auto;
-}
-.countdown .clock-item .count-number {
-  background: var(--accent-color);
-  color: var(--font-color);
-  font-size: 2rem;
-  font-weight: 700;
-  font-family: var(--font-secondary);
-  padding: 1rem;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  line-height: 1;
-  border-radius: 4px 4px 0 0;
-}
-.countdown .clock-item .count-text {
-  background: var(--btn-bg-color);
-  font-family: var(--font-secondary);
-  font-size: 1.1rem;
-  color: var(--bg-color);
-  padding: 0.5rem 0.7rem;
-  display: inline-block;
-  width: 100%;
-  text-align: center;
-  line-height: 1;
-  border-radius: 0 0 4px 4px;
-}
-
-.countdown h1 {
-  text-shadow: 2px 2px 0 var(--accent-color);
-  font-style: italic;
-  margin: 2rem 0;
-  font-size: 3.5rem;
-  text-align: center;
-}
-
-.countdown p {
-  font-size: 1.1rem;
-  font-family: var(--font-secondary);
-  margin-bottom: 2rem;
-  text-align: center;
-}
 
 
 
@@ -196,16 +147,16 @@ section {
 /* Media Styles */
 
 @media (min-width: 350px){
-  #mainNav .navbar-brand img{
-    display: flex;
+  header.masthead{
+    background: linear-gradient(#330066, #00163f);
   }
+
 }
 
 
 @media(max-width: 480px){
   header.masthead{
     background-size: 25rem;
-    background: linear-gradient(#330066, #00163f);
     padding-top: 7rem;
   }
   #mint-header-img{
@@ -214,29 +165,32 @@ section {
   #mint-header-img img{
     width: 350vw;
   }
+  #navLogoMobile{
+    display: block;
+  }
+  #navLogoDesktop{
+    display:none;
+  }
 }
 
 
 @media( min-width: 768px){
+  .navbar{
+    justify-content: space-between;
+  }
     header.masthead{
       background-size: 25rem;
+      background: linear-gradient(#330066, #00163f);
+      padding-top: 7rem;
     }
     #mint-header-img{
-      margin-top: -3em;
+      margin-top: -125%;
     }
     #mint-header-img img{
-      width: 175vw;
+      width: 100vw;
     }
-  }
-
-@media( min-width: 992px){
-    header.masthead{
-      background-size: 25rem;
+    #mainNav .navbar-brand img{
+      padding: 16px;
     }
-    #mint-header-img{
-      margin-top: -3em;
     }
-    #mint-header-img img{
-      width: 125vw;
-    }
-  }
+  

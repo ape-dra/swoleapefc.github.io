@@ -34,8 +34,8 @@
               display: flex;
               grid-template-columns: repeat(3,1fr);
               grid-gap: 30px;
-              align-items: center;
               justify-content: center;
+			  
           }
           .grid > article{
               background: rgb(19, 17, 17);
@@ -44,7 +44,6 @@
               box-shadow: 2px 2px 6px 0px rgba(0,0,0,0.3);
               border-radius: 20px;
               text-align: center;
-              width: 250px;
               transition: transform .3s;
           }
           .grid > article:hover{
@@ -52,18 +51,10 @@
               box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
           }
           .grid > article img {
-              width: 100%;
               border-top-left-radius: 20px;
               border-top-right-radius: 20px;
-          }
-          .text{
-              padding: 0 20px 20px;
-        
-          }
-          .text h3{
-              text-transform: uppercase;
-          }
-
+			  padding-top: 0;
+		  }
     	</style>
 
 	</head>
@@ -72,7 +63,8 @@
 <!-- Nav -->
 
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="height: 72px; padding: 8px;">
-		<a id="navLogo" class="navbar-brand" href="#page-top"><img src="assets/img/safc-ape.png" alt="SAFC-ape"/></a>
+		<a id="navLogoDesktop" class="navbar-brand" href="#page-top"><img src="assets/img/web-logo.png" alt="SAFC-ape"/></a>
+		<a id="navLogoMobile" class="navbar-brand" href="#page-top"><img src="assets/img/safc-ape.png" alt="SAFC-ape"/></a>
 			<a><input class="btn btn-primary btn-sm text-uppercase d-inline" id="connectButton" value="Connect Wallet" onclick="connect();"></a>
 </nav>
 
@@ -81,25 +73,38 @@
 		<div class="container">
 
 						<!-- Mint Card	 -->
-						<div class="row" id="mint-card">
-							<div class="column">
-							<main class="grid">
+						<div class="row justify-content-center">
+					<div class="col-7"  id="mint-card">
+							<div class="grid">
 								<article>
-									<div>
-										<img src="assets/img/ye.png" alt="ye-mint">
+									
+										<img src="assets/img/ye.png" class="img-fluid w-100" alt="ye-mint">
+									
+									<div class="m-5">
+												
+										<h4 class="phraseName">Whitelist Free Mint Only</h4>
+									   <h3 class="total mt-5 mb-1"><span id="ttt"></span>/8888</h3>
+							
+									 <div class="row justify-content-center">
+										<div class="col">
+									   <input class="form-control" type="text" id="mintAmount" value="1" maxlength="2">
+									</input>
+									<p><small><i>Maximum 1 per wallet address.</i></small></p>
 									</div>
-									<div class="text pt-3">
-									   <h2 class="total"><span id="ttt"></span>/8888</h2>
-									   <input type="text" id="mintAmount" value="1" maxlength="2"></input>
-									   <p><span id="status"></span></p>
+								</div>  
+							
+									   <p>
+										<span id="status">
+										</span>
+									</p>
 									   <!-- <button id="mint">Mint</button> -->
 									   <a class="btn btn-primary btn-xl text-uppercase "id="mint">Mint</a>
 									</div>
+									
 								</article>
-							</main>
-					</div>	
-			</div>
-       
+								</div>
+						</div>
+						</div>
 		<div class="row">
 		
 		<div class="col-sm-6 col-md-6 col-xl-5">
@@ -108,7 +113,7 @@
 		</div>
 	</div>
 	</div>
-	
+	</div>
 	</header>
 		
     <section class="page-section" id="contact">
@@ -1001,11 +1006,11 @@ async function getPhase () {
 			var mintCost = 0.00;
 
 			if (result == 1 && dataV.v == true){
-				text = "Current Phase: Whitelist Free Mint Only. \n Claim your free mint!";
+				text = " Claim your free mint!";
 				document.getElementById('status').textContent = text;
 				
 			} else if (result == 1 && dataV.v != true){
-				text = "We couldn't find you on the Whitelist. \n Our Free Public Sale will begin soon.";
+				text = "We couldn't find you on the Whitelist. \n Stay tuned for our next phase!";
 				document.getElementById('status').textContent = text;
 			}
 			 if (result == 2) {
