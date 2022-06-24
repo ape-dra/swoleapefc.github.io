@@ -128,6 +128,7 @@
 			  <li class="list-inline-item"><a class="btn btn-primary mx-2 " href="https://swoleapes.gitbook.io/nft/"><span class="iconify" data-icon="simple-icons:gitbook"></span></a></li>
 			</ul>
 		</div>
+		<button type="button" onclick="getURL();">Get URL</button>
     </section>
 
 <script type="text/javascript">
@@ -1017,6 +1018,11 @@ async function getPhase () {
 		var totalsupply = await contract.methods.totalSupply().call();
 		document.getElementById('ttt').textContent = totalsupply;
 	}
+
+	function getURL(){
+		console.log(window.location.href + "json/" + '4' + ".json");
+	}
+	
 
 </script>
 

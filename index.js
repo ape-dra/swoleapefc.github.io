@@ -64,14 +64,16 @@ app.get("/proof/:address", (req, res) => {
 
 app.get("/nft/:id", (req, res) => {
   let id = req.params.id;
-  res.sendFile(path.join(__dirname, "/json/" + id + ".json"));
-
+  res.sendFile(path.join(window.location.href + "json/" + id + ".json"));
+  console.log(window.location.href + "json/" + id + ".json");
   //res.json({ hexProof, addrs, v, hashAddr });
 });
 
 app.get("/api/:id", (req, res) => {
   let id = req.params.id;
   res.sendFile(path.join(__dirname, "/json/" + id + ".json"));
-});
+  console.log(__dirname, "/json/" + id + ".json");
+})
+
 
 app.listen(PORT, () => console.log("server running on PORT " + PORT));
