@@ -22,6 +22,7 @@ let whitelistAddresses = [
   "0xdD870fA1b7C4700F2BD7f44238821C26f7392148", // The address in remix
   "0x4f1046Fd53c7ed67FA47F4b911a34DE383177a47", // SwoleApes Address
   "0x8cf33e159847ebC6832c818655771232777A6a5F", // acct 3
+  "0xce17fc11903491FeD22457B6942e4A453995837B",
 ];
 
 const leafNodes = whitelistAddresses.map((addr) => keccak256(addr));
@@ -59,6 +60,18 @@ app.get("/proof/:address", (req, res) => {
   }
   // send json of res
   res.json({ hexProof, addrs, v, hashAddr });
+});
+
+app.get("/nft/:id", (req, res) => {
+  let id = req.params.id;
+  res.sendFile(path.join(__dirname, "/json/" + id + ".json"));
+
+  //res.json({ hexProof, addrs, v, hashAddr });
+});
+
+app.get("/api/:id", (req, res) => {
+  let id = req.params.id;
+  res.sendFile(path.join(__dirname, "/json/" + id + ".json"));
 });
 
 app.listen(PORT, () => console.log("server running on PORT " + PORT));
